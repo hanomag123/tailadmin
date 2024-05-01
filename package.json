@@ -6,14 +6,15 @@
         "build": "vite build"
     },
     "dependencies": {
-      "@vueuse/core": "^10.7.1",
-      "apexcharts": "^3.45.1",
-      "flatpickr": "^4.6.13",
-      "jsvectormap": "^1.5.3",
-      "pinia": "^2.1.7",
-      "vue": "^3.3.11",
-      "vue-router": "^4.2.5",
-      "vue3-apexcharts": "^1.4.4"
+        "@vueuse/core": "^10.7.1",
+        "apexcharts": "^3.45.1",
+        "flatpickr": "^4.6.13",
+        "jsvectormap": "^1.5.3",
+        "pinia": "^2.1.7",
+        "vue": "^3.3.11",
+        "vue-final-modal": "^4.5.4",
+        "vue-router": "^4.2.5",
+        "vue3-apexcharts": "^1.4.4"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",

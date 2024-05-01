@@ -7,6 +7,7 @@ import TableThree from '@/Components/Tables/TableThree.vue'
 import DefaultLayout from '@/Layouts/DefaultLayout.vue'
 
 const pageTitle = ref('Tables')
+const props = defineProps(['products'])
 </script>
 
 <template>
@@ -14,9 +15,11 @@ const pageTitle = ref('Tables')
     <!-- Breadcrumb Start -->
     <BreadcrumbDefault :pageTitle="pageTitle" />
     <!-- Breadcrumb End -->
-
+    <div v-for="product of products" :key="product.id">
+      <div>helo</div>
+    </div>
     <div class="flex flex-col gap-10">
-      <TableOne />
+      <TableOne :products="products"/>
       <TableTwo />
       <TableThree />
     </div>

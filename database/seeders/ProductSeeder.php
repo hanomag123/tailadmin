@@ -13,13 +13,13 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::make([
+        Product::create([
           'logo' => '/assets/images/brand/brand-01.svg',
           'name' => 'Google',
           'visitors' => 3.5,
           'revenues' => '5,768',
           'sales' => 590,
           'conversion' => 4.8
-        ]);
+        ]); 
     }
 }

@@ -7,6 +7,17 @@ import BrandThree from '@/assets/images/brand/brand-03.svg'
 import BrandFour from '@/assets/images/brand/brand-04.svg'
 import BrandFive from '@/assets/images/brand/brand-05.svg'
 
+import { ModalsContainer, useModal } from 'vue-final-modal'
+import ModalConfirmPlainCss from '@/Components/ModalConfirmPlainCss.vue'
+
+
+interface IProduct {
+  id: Number,
+  name: String,
+}
+
+defineProps(['products']);
+
 const brandData = ref([
   {
     logo: BrandOne,
@@ -49,12 +60,30 @@ const brandData = ref([
     conversion: 4.2
   }
 ])
+
+const { open, close } = useModal({
+    component: ModalConfirmPlainCss,
+    attrs: {
+      title: 'Hello World!',
+      onConfirm() {
+        close()
+      },
+    },
+    slots: {
+      default: '<p>The content of the modal</p>',
+    },
+  })
+
 </script>
 
 <template>
   <div
     class="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1"
   >
+  <div v-for="product of products" :key="product.id">
+    <div>{{ product.name }}</div>
+  </div>
+
     <h4 class="mb-6 text-xl font-semibold text-black dark:text-white">Top Channels</h4>
 
     <div class="flex flex-col">
@@ -103,7 +132,7 @@ const brandData = ref([
         </div>
 
         <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-          <p class="text-meta-5">{{ brand.conversion }}%</p>
+          <button class="text-meta-5"  @click="open">Edit</button> 
         </div>
       </div>
     </div>

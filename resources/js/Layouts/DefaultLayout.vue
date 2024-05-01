@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import HeaderArea from '@/Components/Header/HeaderArea.vue'
 import SidebarArea from '@/Components/Sidebar/SidebarArea.vue'
+import { ModalsContainer } from 'vue-final-modal'
+
 </script>
 
 <template>
@@ -15,8 +17,9 @@ import SidebarArea from '@/Components/Sidebar/SidebarArea.vue'
       <!-- ===== Header Start ===== -->
       <HeaderArea />
       <!-- ===== Header End ===== -->
-
+      
       <!-- ===== Main Content Start ===== -->
+      <ModalsContainer />
       <main>
         <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
           <slot></slot>
