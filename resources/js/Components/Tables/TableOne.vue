@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import {Link} from '@inertiajs/vue3'
 
 import BrandOne from '@/assets/images/brand/brand-01.svg'
 import BrandTwo from '@/assets/images/brand/brand-02.svg'
@@ -132,7 +133,7 @@ const { open, close } = useModal({
         </div>
 
         <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-          <button class="text-meta-5"  @click="open">Edit</button> 
+          <Link :href="route('edit', 1)" class="text-meta-5">Edit</Link> 
         </div>
       </div>
     </div>

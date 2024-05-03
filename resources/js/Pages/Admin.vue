@@ -7,7 +7,7 @@ import TableThree from '@/Components/Tables/TableThree.vue'
 import DefaultLayout from '@/Layouts/DefaultLayout.vue'
 
 const pageTitle = ref('Tables')
-const props = defineProps(['products'])
+defineProps(['products'])
 </script>
 
 <template>
